@@ -35,6 +35,8 @@ public class MalleusJitsificus
      */
     private static final String INPUT_VIDEO_FILE
         = "resources/FourPeople_1280x720_30.y4m";
+    // private static final String INPUT_VIDEO_FILE
+    //     = "/tmp/jitsi/file_example_WAV_1MG.wav";
 
     public static final String CONFERENCES_PNAME
         = "org.jitsi.malleus.conferences";

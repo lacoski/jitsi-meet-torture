@@ -229,19 +229,24 @@ public class WebParticipantFactory
 
             ops.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
 
-            if (options.isChromeSandboxDisabled())
-            {
-                ops.addArguments("no-sandbox");
-                ops.addArguments("disable-dev-shm-usage");
-                ops.addArguments("disable-setuid-sandbox");
-            }
+            // if (options.isChromeSandboxDisabled())
+            // {
+            //     ops.addArguments("no-sandbox");
+            //     ops.addArguments("disable-dev-shm-usage");
+            //     ops.addArguments("disable-setuid-sandbox");
+            // }
 
-            if (options.isHeadless())
-            {
-                ops.addArguments("headless");
-                ops.addArguments("window-size=1200x600");
-            }
+            // if (options.isHeadless())
+            // {
+            //     ops.addArguments("headless");
+            //     ops.addArguments("window-size=1200x600");
+            // }
 
+            ops.addArguments("no-sandbox");
+            ops.addArguments("disable-dev-shm-usage");
+            ops.addArguments("disable-setuid-sandbox");
+            ops.addArguments("headless");
+            
             // starting version 46 we see crashes of chrome GPU process when
             // running in headless mode
             // which leaves the browser opened and selenium hang forever.
